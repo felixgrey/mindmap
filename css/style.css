@@ -1,0 +1,70 @@
+.MMcontainerDiv {
+	background-color: #ffffcc;
+	overflow: hidden;
+	font-family: Microsoft YaHei;
+}
+
+.MMnodeDiv {
+	position: absolute;
+}
+
+.MMnodeInnerDiv {
+	position: absolute;
+	bottom: 6px;
+	cursor: move;
+	line-height: 20px;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 9px 9px 9px 9px;
+}
+
+.MMcurrentNodeDiv {
+	border: solid red 1px;
+}
+
+.MMnodeInnerDivHover:hover {
+	border: dashed grey 1px;
+}
+
+.MMrootNodeInnerDiv {
+	background-color: #ffffcc;
+	border: solid red 5px;
+	border-radius: 9px 9px 9px 9px;
+	bottom: -5px;
+	font-size: larger;
+}
+
+.MMrootNodeInnerDiv:hover {
+	border: solid red 5px;
+}
+
+.MMnodeCurveDom {
+	position: absolute;
+}
+
+.MMEditor {
+	width: 150%;
+	height: 150%;
+	position: absolute;
+	top: -25%;
+	left: -25%;
+	background-color: #ffffff;
+}
+
+.MMPointDiv {
+	background-color: red;
+	border: solid red 50%;
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	bottom: -18px;
+	left: 45%;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 16px;
+	font-weight: bold;
+	color: #ffffff;
+}

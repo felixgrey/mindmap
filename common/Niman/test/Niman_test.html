@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="" />
+		<title></title>
+		<style>
+			table {
+				border: solid black 1px;
+			}
+			table td {
+				border: solid black 1px;
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				vertical-align: middle;
+				font-family: "微软雅黑";
+				font-size: 40px;
+			}
+		</style>
+		<script src="../js/Niman.js" config='config.js'></script>
+	</head>
+	<body>
+		<table id='table'>
+			<tbody nvm-bind="each:list">
+				<tr nvm-bind="each:columns">
+					<td nvm-bind="text:value;style:{backgroundColor:color};attr:{ij:data.name}" ></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

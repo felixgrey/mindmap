@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html style="width: 100%;height: 100%;">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#table {
+				border: solid black 1px;
+				position: relative;
+			}
+			#table  td {
+				padding: 0px;
+				border: solid black 1px;
+				width: 80px;
+				height: 80px;
+				line-height: 80px;
+				text-align: center;
+				vertical-align: middle;
+				font-family: "微软雅黑";
+				font-size: 40px;
+				cursor: pointer;
+			}
+
+			.push {
+				background-color: #9999ff;
+			}
+		</style>
+		<script src="js/Niman.js" config='config.js' main='index.js'></script>
+	</head>
+	<body style="width: 100%;height: 100%;">
+		<form action="" method="post">
+			
+			<input type="submit" value=""/>
+		</form>
+		<table width="100%">
+			<tr>
+				<td width="40%">
+				<table id='table'>
+					<tr>
+						<td> 1 </td>
+						<td>2</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>8</td>
+						<td>9</td>
+					</tr>
+					<tr>
+						<td>
+						<div id='dd1' style="position: relative;top: 0px;left: 0px;cursor: move;width:70px;height:70px;background: red;" dragSwitch='on'>
+							*
+						</div></td>
+						<td>0</td>
+						<td>
+						<div id='dd2' style="position: relative;top: 0px;left: 0px;cursor: move;width:70px;height:70px;background: red;" dragSwitch='on'>
+							#
+						</div></td>
+
+					</tr>
+				</table></td>
+				<td>				<textarea id='textarea' style="width:400px;height: 400px;"></textarea></td>
+			</tr>
+		</table>
+		<script>
+
+		</script>
+	</body>
+</html>

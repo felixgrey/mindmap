@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			table {
+				border: solid black 1px;
+			}
+			table td {
+				border: solid black 1px;
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				vertical-align: middle;
+				font-family: "微软雅黑";
+				font-size: 40px;
+			}
+		</style>
+		<script src="../niman/Niman.js" config="config.js" main="./ajax_query_viewTest.js"></script>
+	</head>
+	<body>
+		<table id='table'>
+			<tbody data-bind="foreach:list">
+				<tr data-bind="foreach:columns">
+					<td data-bind="text:value;style:{backgroundColor:color};attr:{ij:position}" ></td>
+				</tr>
+			</tbody>
+		</table>
+		<div ij='4,3' ></div>
+	</body>
+</html>

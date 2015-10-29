@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="" />
+		<title></title>
+		<style>
+			table {
+				border: solid black 1px;
+			}
+			table td {
+				border: solid black 1px;
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				vertical-align: middle;
+				font-family: "微软雅黑";
+				font-size: 40px;
+			}
+		</style>
+		<script src="../js/modules/nvm.js"></script>
+	</head>
+	<body>
+		<table id='table'>
+			<tbody data-bind="each:list">
+				<tr data-bind="each:columns">
+					<td data-bind="text:value;style:{backgroundColor:color};attr:{ij:data.name}" ></td>
+				</tr>
+			</tbody>
+		</table>
+		<script>
+			var viewModel= {
+				name:'aa',
+				list : []
+			};
+
+			for (var i = 0; i < 8; i++) {
+				viewModel.list.push({
+					columns : []
+				});
+				for (var j = 0; j < 8; j++) {
+					viewModel.list[i].columns.push({
+						position : i + ',' + j,
+						color : function(dom) {
+							var p = dom._anchor.replace(/(\.list\.)|(\.columns)/g, '').split('.');
+							p[0] = parseInt(p[0]);
+							p[1] = parseInt(p[1]);
+							if ((p[0] + p[1]) % 2) {
+								return 'grey';
+							}
+							return 'white';
+						},
+						value : function(dom) {
+							var p = dom._anchor.replace(/(\.list\.)|(\.columns)/g, '').split('.');
+							p[0] = parseInt(p[0]);
+							p[1] = parseInt(p[1]);
+							return p[0] * 8 + p[1] + 1
+						}
+					});
+				}
+			};
+			
+			var nvm=new Nvm(document.getElementById("table"));
+			
+			nvm.bindModel(viewModel);
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
